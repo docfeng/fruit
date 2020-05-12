@@ -10,5 +10,11 @@
 		"goods_name":"香蕉",
 		"goods_specification":"1kg",
 		"goods_price":10
+	},
+	{
+		"goods_code":"003",
+		"goods_name":"梨",
+		"goods_specification":"0.5kg",
+		"goods_price":5
 	}
 ]
