@@ -1,0 +1,14 @@
+[
+	{
+		"goods_code":"001",
+		"goods_name":"苹果",
+		"goods_specification":"1kg",
+		"goods_price":10
+	},
+	{
+		"goods_code":"002",
+		"goods_name":"香蕉",
+		"goods_specification":"1kg",
+		"goods_price":10
+	}
+]

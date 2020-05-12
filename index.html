@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<meta name="full-screen" content="yes" />
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta content="telephone=no,email=no" name="format-detection">
+		<title>水果统计</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="script/http.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="main">
+				<div class="container" id="panel1">
+					<div class="header">
+						<div class="item_1">
+							
+						</div>
+						<div class="item_2">
+							订单细目
+						</div>
+						<div class="item_3" onclick="UI.showMenuItem()">
+							...<div id="MenuItem1" style="position: absolute;" class="hide">
+								<div class="container">
+									<div class="main" onclick="UI.show(4)">
+										添加类别
+									</div>
+									<div class="main" onclick="UI.show(5)">
+										添加订单
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="main">
+						<div style="height: 100%;width: 100%;overflow: scroll;">
+							<table id="panel1_t1" border="" cellspacing="" cellpadding="" ondblclick="Panel1.alter()">
+							</table>
+						</div>
+						<div style="position: absolute;height: 30%;width: 100%;overflow: scroll;" class="hide">
+							<table id="panel1_t0" border="" cellspacing="" cellpadding="" ondblclick="Panel1.onSelect(event.srcElement)">
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="container hide" id="panel2">
+					<div class="header">
+						<div class="item_1">
+							
+						</div>
+						<div class="item_2">
+							订单细目
+						</div>
+						<div class="item_3">
+							...
+						</div>
+					</div>
+					<div class="main">
+						<div style="height: 100%;width: 100%;overflow: scroll;">
+							<table id="panel2_t1" border="" cellspacing="" cellpadding="">
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="container hide" id="panel3">
+					<div class="header">
+						<div class="item_1">
+							
+						</div>
+						<div class="item_2">
+							订单细目
+						</div>
+						<div class="item_3">
+							...
+						</div>
+					</div>
+					<div class="main">
+						<div style="height: 100%;width: 100%;overflow: scroll;">
+							<table id="panel3_t1" border="" cellspacing="" cellpadding="">
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="container hide" id="panel4">
+					<div class="header">
+							<div class="item_1">
+								
+							</div>
+							<div class="item_2">
+								添加/修改类别
+							</div>
+							<div class="item_3">
+								...
+							</div>
+						</div>
+					<div class="main">
+						<button type="button" onclick="UI.showGoodsClass()">显示</button>
+						<div style="height: 30%;width: 100%;overflow: scroll;">
+							<table id="panel4_t1" border="" cellspacing="" cellpadding="">
+							</table>
+						</div>
+						<div style="height: 30%;width: 100%;overflow: scroll;" class="hide">
+							<table id="panel4_t0" border="" cellspacing="" cellpadding="" ondblclick="UI.onSelect(event.srcElement)">
+							</table>
+						</div>
+						<div style="height: 30%;width: 100%;overflow: scroll;">
+							<table id="panel4_t2" border="" cellspacing="" cellpadding="">
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="container hide" id="panel5">
+					<div class="header">
+							<div class="item_1">
+								
+							</div>
+							<div class="item_2">
+								添加/修改订单
+							</div>
+							<div class="item_3">
+								...
+							</div>
+						</div>
+					<div class="main">
+						
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div id="" onclick="UI.show(1)">
+					订单详情
+				</div>
+				<div id="" onclick="UI.show(2)">
+					订单汇总
+				</div>
+				<div id="" onclick="UI.show(3)">
+					设置
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
