@@ -202,6 +202,7 @@ Panel1={
 		
 	},
 	deleteOption:function(){
+		if(!confirm("确定删除"))return;
 		var row=event.srcElement.parentNode.parentNode;
 		var index=row.rowIndex
 		panel1_t1.deleteRow(index);
@@ -592,6 +593,7 @@ Panel4={
 		}
 	},
 	deleteOption:function(){
+		if(!confirm("确定删除"))return;
 		var row=event.srcElement.parentNode.parentNode;
 		var index=row.rowIndex
 		panel4_t1.deleteRow(index);
@@ -744,10 +746,7 @@ UI={
 				toggle(this.obj);
 				this.obj=panel4;
 				toggle(this.obj);
-				if(!this.goods){
-					var options=Panel2.goods
-					UI.goods=options;
-				}
+				Panel4.showTable1()
 				break;
 			
 			case 5:
