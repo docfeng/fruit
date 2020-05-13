@@ -48,14 +48,20 @@ Panel1={
 		"<td><input type=\"text\" /></td>"+
 		"<td><button type=\"button\" onclick=\"Panel1.addSelect()\">添加</button>"; */
 	},
-	showSelectTable:function(){
+	showSelectTable:function(name){
 		show(panel1_t0.parentNode);
 		Panel1.rowIndex=event.srcElement.parentNode.parentNode.rowIndex;
+		
+		console.log(name)
 		panel1_t0.parentNode.style.top=(event.clientY+60)+"px"
 		var head="<tr><th>商品编码</th><th>商品名称</th><th>商品规格</th><th>商品单价</th></tr>";
 		var html="";
 		var goods=DataBase.goods;
 		for (var i = 0; i < goods.length; i++) {
+			if(name&&goods[i].goods_name.indexOf(name)==-1){
+				console.log(goods[i].goods_name)
+				continue;
+			}
 			html+="<tr>"+
 			"<td>"+goods[i].goods_code+"</td>"+
 			"<td>"+goods[i].goods_name+"</td>"+
@@ -111,15 +117,7 @@ Panel1={
 		hide(panel1_t0.parentNode)
 	},
 	onSelectInput:function(text){
-		if(text==""){
-			this.showSelectTable();
-		}else{
-			/* for (var i = 0; i < Things.length; i++) {
-				Things[i]
-			} */
-		}
-		
-		document.title=a
+		this.showSelectTable(text)
 	},
 	addSelect:function(){
 		hide(panel1_t0.parentNode);
@@ -191,7 +189,7 @@ Panel1={
 		var obj=event.srcElement;
 		if(obj.tagName.toLowerCase()=="td"){
 			if(obj.cellIndex==4){
-				obj.innerHTML="<input type=\"text\" onblur=\"Panel1.onchange(this)\" onchange=\"Panel1.onchange(this)\" onfocus=\"Panel1.showSelectTable()\" onclick=\"Panel1.showSelectTable()\" oninput=\"Panel1.onSelectInput(this.value)\" value=\""+obj.innerHTML +"\"/>"
+				obj.innerHTML="<input type=\"text\" onblur=\"Panel1.onchange(this)\" onchange=\"Panel1.onchange(this)\" onfocus=\"Panel1.showSelectTable()\" onclick=\"Panel1.showSelectTable(this.value)\" oninput=\"Panel1.onSelectInput(this.value)\" value=\""+obj.innerHTML +"\"/>"
 				obj.querySelector("input").focus();
 			}else if(obj.cellIndex==8){
 				
