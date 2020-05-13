@@ -15,6 +15,10 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 		<script src="script/http.js" type="text/javascript" charset="utf-8"></script>
 		<script src="script/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/panel1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/panel2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/panel4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/panel5.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -44,6 +48,9 @@
 						从<input type="date" id="panel1_beginTime" onchange="Panel1.setBeginTime()" />
 						到<input type="date" id="panel1_endTime" onchange="Panel1.setEndTime()" />
 						<button type="button" onclick="Panel1.setTime()">当天</button>
+						<button type="button" onclick="Panel1.setWeek()">当周</button>
+						<button type="button" onclick="Panel1.setMonth()">当月</button>
+						<button type="button" onclick="Panel1.setYear()">当年</button>
 						当前日期：<input type="date" id="panel1_orderTime" onchange="Panel1.setOrderTime()" />
 						<div style="height: 100%;width: 100%;overflow: scroll;">
 							<table id="panel1_t1" border="" cellspacing="" cellpadding="" ondblclick="Panel1.alter()">
@@ -71,6 +78,9 @@
 						从<input type="date" id="panel2_beginTime" onchange="Panel2.setBeginTime()" />
 						到<input type="date" id="panel2_endTime" onchange="Panel2.setEndTime()" />
 						<button type="button" onclick="Panel2.setTime()">当天</button>
+						<button type="button" onclick="Panel2.setWeek()">当周</button>
+						<button type="button" onclick="Panel2.setMonth()">当月</button>
+						<button type="button" onclick="Panel2.setYear()">当年</button>
 						当前日期：<input type="date" id="panel2_orderTime" onchange="Panel2.setOrderTime()" />
 						<div style="height: 40%;width: 100%;overflow: scroll;">
 							<table id="panel2_t1" border="" cellspacing="" cellpadding="">
@@ -131,14 +141,22 @@
 								
 							</div>
 							<div class="item_2">
-								添加/修改订单
+								设置
 							</div>
 							<div class="item_3">
 								...
 							</div>
 						</div>
 					<div class="main">
-						
+						<button type="button" onclick="Panel5.showTable1()">显示</button>
+						<div style="height: 40%;width: 100%;overflow: scroll;">
+							<table id="panel5_t1" border="" cellspacing="" cellpadding="">
+							</table>
+						</div>
+						<div style="height: 30%;width: 100%;overflow: scroll;">
+							<table id="panel5_t2" border="" cellspacing="" cellpadding=""">
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -152,7 +170,7 @@
 				<div id="" onclick="UI.show(4)">
 					类别管理
 				</div>
-				<div id="" onclick="UI.show(3)">
+				<div id="" onclick="UI.show(5)">
 					设置
 				</div>
 			</div>
